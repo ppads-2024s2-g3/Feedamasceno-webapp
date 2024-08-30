@@ -7,22 +7,22 @@ import lombok.NoArgsConstructor;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "employees")
+@Table(name = "company")
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class Employee {
+public class Company {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "first_name")
-    private String firstName;
+    @Column(name = "name")
+    private String name;
 
-    @Column(name = "last_name")
-    private String lastName;
+    @Column(name = "address")
+    private String address;
 
-    @Column(name = "email")
-    private String email;
+    @Column(name = "capital")
+    private Float capital;
 }
